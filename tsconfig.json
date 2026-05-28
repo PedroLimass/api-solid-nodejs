@@ -15,6 +15,10 @@
     // "lib": ["esnext"],
     // "types": ["node"],
     // and npm install -D @types/node
+    "baseUrl": "./" /* Specify the base directory to resolve non-relative module names. */,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
 
     // Other Outputs
     "sourceMap": true,
@@ -40,6 +44,6 @@
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   }
 }
