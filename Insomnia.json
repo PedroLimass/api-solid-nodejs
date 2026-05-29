@@ -1,13 +1,13 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2023-02-26T19:02:34.927Z",
+  "__export_date": "2023-03-02T20:59:58.867Z",
   "__export_source": "insomnia.desktop.app:v2022.7.5",
   "resources": [
     {
       "_id": "req_8c385f065d9e4b3f8629bcb5947328cf",
       "parentId": "wrk_684ab39119314a10a7bd0a69669a814f",
-      "modified": 1677438080778,
+      "modified": 1677790765129,
       "created": 1677437965899,
       "url": "http://localhost:3333/users",
       "name": "Create User",
@@ -15,7 +15,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"name\": \"\",\n\t\"email\": \"\",\n\t\"password\": \"123456\"\n}"
+        "text": "{\n\t\"name\": \"\",\n\t\"email\": \"\",\n\t\"password\": \"\"\n}"
       },
       "parameters": [],
       "headers": [{ "name": "Content-Type", "value": "application/json" }],
@@ -39,6 +39,32 @@
       "description": "",
       "scope": "collection",
       "_type": "workspace"
+    },
+    {
+      "_id": "req_352251d4b0f44a74bbd65f5892cdf3e5",
+      "parentId": "wrk_684ab39119314a10a7bd0a69669a814f",
+      "modified": 1677790769290,
+      "created": 1677789216671,
+      "url": "http://localhost:3333/sessions",
+      "name": "Authenticate",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"\",\n\t\"password\": \"\"\n}"
+      },
+      "parameters": [],
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "authentication": {},
+      "metaSortKey": -1677269932435.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
     },
     {
       "_id": "env_07c89d012abdc5ec75fc8ab18b236222a49c2d5c",
