@@ -25,22 +25,27 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
-    "studio": "prisma studio"
+    "studio": "prisma studio",
+    "test:e2e": "vitest run --config vitest.config.e2e.ts",
+    "test:e2e:watch": "vitest --config vitest.config.e2e.ts"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "2.2.2",
     "@types/node": "^25.9.1",
     "@types/pg": "8.20.0",
+    "@types/supertest": "7.2.0",
     "@vitest/coverage-v8": "4.1.7",
     "eslint": "8.57.1",
     "prettier-plugin-prisma": "5.0.0",
     "prisma": "7.8.0",
+    "supertest": "7.2.2",
     "tsup": "^8.5.1",
     "tsx": "^4.22.3",
     "typescript": "^6.0.3",
     "vitest": "4.1.7"
   },
   "dependencies": {
+    "@fastify/jwt": "10.1.0",
     "@prisma/adapter-pg": "7.8.0",
     "@prisma/client": "7.8.0",
     "@vitest/ui": "4.1.7",

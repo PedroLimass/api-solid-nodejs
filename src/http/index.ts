@@ -1,2 +1,2 @@
-export * from './controllers/index.js'
+export * from './controllers/users/index.js'
 export * from './routes.js'
