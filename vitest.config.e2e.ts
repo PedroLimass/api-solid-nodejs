@@ -10,6 +10,9 @@ export default defineConfig({
   test: {
     include: ['src/http/**/*.spec.ts'],
     environment: 'node',
+    env: {
+      NODE_ENV: 'test',
+    },
     globals: true,
     setupFiles: ['./src/http/e2e-setup.ts'],
     fileParallelism: false,
