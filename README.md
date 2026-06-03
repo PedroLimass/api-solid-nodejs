@@ -12,6 +12,7 @@ API REST construída em **Node.js + TypeScript** para uma aplicação no estilo 
 | Autenticação | [@fastify/jwt](https://github.com/fastify/fastify-jwt) + [@fastify/cookie](https://github.com/fastify/fastify-cookie) |
 | ORM | [Prisma](https://www.prisma.io/) 7 (Rust-free, adapter PG) |
 | Banco | PostgreSQL (via Docker) |
+| Docs | [@fastify/swagger](https://github.com/fastify/fastify-swagger) + [Swagger UI](https://github.com/fastify/fastify-swagger-ui) (OpenAPI 3) |
 | Validação | [Zod](https://zod.dev/) |
 | Hash de senha | [bcryptjs](https://github.com/dcodeIO/bcrypt.js) |
 | Datas | [Day.js](https://day.js.org/) |
@@ -151,6 +152,15 @@ O controle de acesso por papel é feito pelo middleware `verifyUserRole`, aplica
 | `GET` | `/check-ins/metrics` | Bearer JWT | — |
 | `POST` | `/gyms/:gymId/check-ins` | Bearer JWT | — |
 | `PATCH` | `/check-ins/:checkInId/validate` | Bearer JWT | `ADMIN` |
+
+## Documentação (Swagger / OpenAPI)
+
+A API expõe documentação interativa gerada via `@fastify/swagger` a partir dos schemas das rotas.
+
+- **Swagger UI:** [`http://localhost:3333/docs`](http://localhost:3333/docs)
+- **Especificação OpenAPI (JSON):** `http://localhost:3333/docs/json`
+
+Para testar rotas autenticadas na UI, clique em **Authorize** e informe o access token (obtido em `POST /sessions`) no formato `Bearer <token>`.
 
 ## Testes
 
