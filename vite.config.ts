@@ -11,5 +11,6 @@ export default defineConfig({
     environment: 'node',
     globals: true,
     root: './src',
+    exclude: ['**/http/**/*.spec.ts'],
   },
 })

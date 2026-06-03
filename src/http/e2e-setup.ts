@@ -1,7 +1,7 @@
-import { beforeAll } from 'vitest'
+import { beforeEach } from 'vitest'
 import { prisma } from '@/lib/prisma.js'
 
-beforeAll(async () => {
+beforeEach(async () => {
   await prisma.$executeRawUnsafe(
     'TRUNCATE TABLE "check_ins", "gyms", "users" RESTART IDENTITY CASCADE',
   )
